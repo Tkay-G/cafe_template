@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Corner Cup – Coffee, pastries and lunch</title>
+  <meta name="description" content="A small neighbourhood cafe serving fresh coffee, baked goods and simple lunches.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#menu">Skip to menu</a>
+
+  <header class="site-header">
+    <a class="logo" href="#top">The Corner Cup</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav">
+      <a href="#menu">Menu</a>
+      <a href="#story">Our story</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1>Good coffee on the corner.</h1>
+      <p class="lead">Small-batch espresso, pastries baked every morning and a lunch table that is never in a hurry.</p>
+      <p class="status" id="status" aria-live="polite">Checking opening hours…</p>
+      <a class="btn" href="#menu">See the menu</a>
+    </section>
+
+    <section class="board" id="menu" aria-labelledby="menu-title">
+      <div class="board-inner">
+        <h2 id="menu-title">Today’s menu</h2>
+        <div class="tabs" role="tablist" aria-label="Menu categories" id="tabs"></div>
+        <ul class="items" id="items" role="tabpanel"></ul>
+        <p class="note">Oat, soy and almond milk at no extra charge. Ask us about allergens.</p>
+      </div>
+    </section>
+
+    <section class="story" id="story" aria-labelledby="story-title">
+      <h2 id="story-title">Our story</h2>
+      <div class="story-text">
+        <p>We opened The Corner Cup in 2019 with one espresso machine and a rule: everything we serve should be something we would happily eat ourselves.</p>
+        <p>Our beans come from a roaster two towns over. Our bread and pastries are baked in the back before we unlock the door. The soup changes with the market.</p>
+        <p>Bring a book, a laptop or a friend. The corner table by the window is yours for as long as you like.</p>
+      </div>
+    </section>
+
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div class="visit-info">
+        <h2 id="visit-title">Visit us</h2>
+        <address>
+          12 Example Street<br>
+          1234 AB Yourtown<br>
+          <a href="tel:+310000000000">+31 00 000 0000</a><br>
+          <a href="mailto:hello@cornercup.example">hello@cornercup.example</a>
+        </address>
+        <table class="hours">
+          <caption class="sr">Opening hours</caption>
+          <tbody id="hours"></tbody>
+        </table>
+      </div>
+
+      <form class="contact" id="contact" novalidate>
+        <h3>Send us a message</h3>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+        <span class="error" data-for="name"></span>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <span class="error" data-for="email"></span>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <span class="error" data-for="message"></span>
+
+        <button class="btn" type="submit">Send message</button>
+        <p class="form-result" id="form-result" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> The Corner Cup</p>
+  </footer>
+</body>
+</html>
